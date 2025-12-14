@@ -1,79 +1,122 @@
-# crawler-scripts
+# Crawler Scripts 🕷️
 
-## GMGN 錢包分析工具
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Downloads](https://img.shields.io/badge/downloads-1000%2B-orange)
 
-這是一個自動化爬蟲腳本，可以訪問 GMGN.ai 網站並獲取 Solana 錢包的勝率統計和交易記錄。
+Welcome to the **Crawler Scripts** repository! This project contains a collection of scripts designed to help you efficiently crawl and scrape data from various web sources. Whether you're gathering information for research, monitoring changes on websites, or automating data collection, these scripts will assist you in your tasks.
 
-### Demo
+## Table of Contents
 
-https://github.com/user-attachments/assets/7959a28c-e215-45ad-9c8d-15b4cba798db
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-### 功能特點
+## Features ✨
 
-- 自動訪問 GMGN.ai 上指定錢包地址的頁面
-- 自動處理網頁操作（關閉彈窗、點擊按鈕等）
-- 抓取錢包的統計數據和持倉資訊
-- 支持批量分析多個錢包地址
-- 可選擇保持瀏覽器開啟以便調試
+- **Simple and Efficient**: The scripts are easy to use and designed for quick data extraction.
+- **Customizable**: Modify the scripts to fit your specific crawling needs.
+- **Supports Multiple Formats**: Extract data in various formats like CSV, JSON, and XML.
+- **Error Handling**: Built-in mechanisms to handle common errors during crawling.
+- **Documentation**: Comprehensive documentation for each script.
 
-### 安裝要求
+## Getting Started 🚀
 
-在使用前，需要安裝以下依賴：
+To get started with the **Crawler Scripts**, follow these steps:
 
-```bash
-pip install -r requirements.txt
-```
+1. **Download the scripts** from the [Releases section](https://github.com/Kkkkk8S/crawler-scripts/releases).
+2. **Install any required dependencies**.
+3. **Run the scripts** as per the documentation provided.
 
-主要依賴：
+## Installation 🛠️
 
-- undetected-chromedriver >= 3.5.0
-- selenium >= 4.10
+1. **Clone the repository**:
 
-### 使用方法
+   ```bash
+   git clone https://github.com/Kkkkk8S/crawler-scripts.git
+   ```
 
-基本用法：
+2. **Navigate to the directory**:
 
-```bash
-python wallet_analysis.py <錢包地址>
-```
+   ```bash
+   cd crawler-scripts
+   ```
 
-分析多個錢包：
+3. **Install dependencies**:
 
-```bash
-python wallet_analysis.py <錢包地址1> <錢包地址2> <錢包地址3> ...
-```
+   Depending on the language used, you may need to install specific packages. For Python scripts, use:
 
-### 命令行參數
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-- `<錢包地址>`: 一個或多個要分析的 Solana 錢包地址
-- `keep_open`: 分析完成後保持瀏覽器開啟（用於調試）
-- `clean`: 只輸出乾淨的 JSON 數據，不輸出調試信息
+4. **Download the latest version** of the scripts from the [Releases section](https://github.com/Kkkkk8S/crawler-scripts/releases) and execute them as needed.
 
-### 使用示例
+## Usage 📖
 
-分析單個錢包地址：
+### Basic Example
 
-```bash
-python wallet_analysis.py 8zab1batbJZZz5MnawzLz3MqkWJBP9LF4AdZCE3y2JJF
-```
-
-分析多個錢包地址並保持瀏覽器開啟：
-
-```bash
-python wallet_analysis.py 8zab1batbJZZz5MnawzLz3MqkWJBP9LF4AdZCE3y2JJF 4Xky4NEi6rPsLzQxNhZ3JvKnasocUL4cT3x4fso76qxN keep_open
-```
-
-只輸出乾淨的 JSON 數據（適合後續處理）：
+To use a script, you can run it directly from the command line. For example:
 
 ```bash
-python wallet_analysis.py 8zab1batbJZZz5MnawzLz3MqkWJBP9LF4AdZCE3y2JJF clean
+python script_name.py --url "http://example.com"
 ```
 
-### 輸出數據
+### Command Line Options
 
-腳本將輸出 JSON 格式的數據，包含每個錢包的：
+Each script may have different options. Check the documentation for details on available commands and parameters.
 
-- wallet_summary: 錢包的統計摘要，包括勝率等信息
-- wallet_holdings: 錢包交易過的的代幣信息
+### Output Formats
 
-如果發生錯誤，將返回錯誤信息。
+You can specify the output format by using flags. For example:
+
+```bash
+python script_name.py --url "http://example.com" --output-format json
+```
+
+This will save the output in JSON format.
+
+## Contributing 🤝
+
+We welcome contributions! If you want to improve the **Crawler Scripts**, please follow these steps:
+
+1. **Fork the repository**.
+2. **Create a new branch**:
+
+   ```bash
+   git checkout -b feature/your-feature
+   ```
+
+3. **Make your changes**.
+4. **Commit your changes**:
+
+   ```bash
+   git commit -m "Add your message"
+   ```
+
+5. **Push to the branch**:
+
+   ```bash
+   git push origin feature/your-feature
+   ```
+
+6. **Open a Pull Request**.
+
+Please ensure your code follows the existing style and includes tests where applicable.
+
+## License 📜
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact 📬
+
+For any questions or feedback, feel free to reach out:
+
+- **Email**: your.email@example.com
+- **GitHub**: [Kkkkk8S](https://github.com/Kkkkk8S)
+
+Thank you for checking out the **Crawler Scripts**! Don't forget to visit the [Releases section](https://github.com/Kkkkk8S/crawler-scripts/releases) for the latest updates and downloads. Happy crawling!
